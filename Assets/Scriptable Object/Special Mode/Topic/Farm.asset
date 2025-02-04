@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620ae3cd9c5f0f448893c0430724a6a6, type: 3}
+  m_Name: Farm
+  m_EditorClassIdentifier: 
+  title: Farm
+  status: 0
+  picture: {fileID: 21300000, guid: 6a5477f08232124449746696c8e17238, type: 3}
+  puzzleItem:
+  - {fileID: 395292911840508601, guid: 0bc6eb9a5fd385d428e63d0bc4d6a7d7, type: 3}
+  - {fileID: 395292911840508601, guid: 3d10736258086084fbda9e1fe8ad917b, type: 3}
+  - {fileID: 395292911840508601, guid: 0e7ceda28b975f1468efcee4d60c5844, type: 3}
+  - {fileID: 395292911840508601, guid: a65db9712e9377d4b9eb6d4193443912, type: 3}
+  m_hiddenItem: []
+  listPuzzleItemPb:
+  - {fileID: 11400000, guid: a1be9971aac90ff45a462e55c33edf0d, type: 2}
+  - {fileID: 11400000, guid: 0eca92c096655e347b8303704a9c4064, type: 2}
+  - {fileID: 11400000, guid: 9695eff0047fc2e4a966c9db297edae7, type: 2}
+  - {fileID: 11400000, guid: ec558a512bd753343a43897ce9b9229f, type: 2}

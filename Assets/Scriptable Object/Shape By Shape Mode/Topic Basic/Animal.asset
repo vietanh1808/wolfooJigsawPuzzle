@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620ae3cd9c5f0f448893c0430724a6a6, type: 3}
+  m_Name: Animal
+  m_EditorClassIdentifier: 
+  title: Animal
+  status: 1
+  picture: {fileID: 21300000, guid: 78b4aef5e3e7c694b8dc4c6cd74bd0ad, type: 3}
+  puzzleItem:
+  - {fileID: 395292911840508601, guid: 0e6e574aaca83b94ebfffe5dfdc9aa30, type: 3}
+  - {fileID: 395292911840508601, guid: 6a18737de1073a043a6fa57d9bfc6b5c, type: 3}
+  - {fileID: 395292911840508601, guid: 370456b75c700b84bad203b45c477d30, type: 3}
+  - {fileID: 395292911840508601, guid: d4229e689bcdaa2419cdd608f8d50d83, type: 3}
+  - {fileID: 395292911840508601, guid: 21c87db8672f96c49b7354ff771d8974, type: 3}
+  - {fileID: 395292911840508601, guid: 151a61fdd617d4041a1861837e3e1622, type: 3}
+  - {fileID: 395292911840508601, guid: 3673c79140285de4e8c129b2d49c6e57, type: 3}
+  - {fileID: 395292911840508601, guid: 68e80bc4639c69243ac841b9f34579d8, type: 3}
+  - {fileID: 395292911840508601, guid: fb2859123cac4a54eae8b51529104121, type: 3}
+  - {fileID: 395292911840508601, guid: 883b68248873e78479a511ce54861bf5, type: 3}
+  - {fileID: 395292911840508601, guid: d4abd9ae09c6dec4b9a42274a30eedc9, type: 3}
+  - {fileID: 395292911840508601, guid: 44caba029941c234aad98a76eaeb88fd, type: 3}
+  m_hiddenItem: []
+  listPuzzleItemPb: []

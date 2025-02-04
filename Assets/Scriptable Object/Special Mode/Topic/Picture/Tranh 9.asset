@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45df2f8b6236f3f46ab611f1225f5fba, type: 3}
+  m_Name: Tranh 9
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 395292911840508601, guid: f30644f92582e0549a3fbe8073611527, type: 3}
+  - {fileID: 395292911840508601, guid: d30aee3dfa842134090e6668a4004d97, type: 3}
+  - {fileID: 395292911840508601, guid: 81989a335fd58714c86d6592efbf42b5, type: 3}
+  - {fileID: 395292911840508601, guid: 68e80bc4639c69243ac841b9f34579d8, type: 3}

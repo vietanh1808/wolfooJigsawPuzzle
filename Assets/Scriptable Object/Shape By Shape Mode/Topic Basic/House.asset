@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620ae3cd9c5f0f448893c0430724a6a6, type: 3}
+  m_Name: House
+  m_EditorClassIdentifier: 
+  title: Building
+  status: 1
+  picture: {fileID: 21300000, guid: 51b34aab11130f545be6cc321e6edb3b, type: 3}
+  puzzleItem:
+  - {fileID: 395292911840508601, guid: 025ccf7aa1e9ba140891d7ce5c3bcc9b, type: 3}
+  - {fileID: 395292911840508601, guid: 0df0aaa98ec1b044f8fc1ae225e47e76, type: 3}
+  - {fileID: 395292911840508601, guid: 1e50ebbeaba694d428a2bdd44fb2c5a5, type: 3}
+  - {fileID: 395292911840508601, guid: fbdfd38e8d4cc9d45a506f0f82a61a14, type: 3}
+  - {fileID: 395292911840508601, guid: 1c42db640ec15644987261a9a75a881f, type: 3}
+  - {fileID: 395292911840508601, guid: 923bbff3d35685a46a8c8842c2a23acc, type: 3}
+  - {fileID: 395292911840508601, guid: a254139aa5320e9458ec953e9aacb54b, type: 3}
+  - {fileID: 395292911840508601, guid: ecd7aa0450ba4c243928dce1e12c3b1e, type: 3}
+  - {fileID: 395292911840508601, guid: 7482ce08de553a242b5da488141a140f, type: 3}
+  - {fileID: 395292911840508601, guid: 81989a335fd58714c86d6592efbf42b5, type: 3}
+  - {fileID: 395292911840508601, guid: cc6f770260dd6a249a6e283ba5a4e960, type: 3}
+  - {fileID: 395292911840508601, guid: 8ed83c669919bdf46bc1dd97465ef08d, type: 3}
+  m_hiddenItem: []
+  listPuzzleItemPb: []

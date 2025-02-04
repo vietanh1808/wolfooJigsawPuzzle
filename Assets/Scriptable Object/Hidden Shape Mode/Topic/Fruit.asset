@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620ae3cd9c5f0f448893c0430724a6a6, type: 3}
+  m_Name: Fruit
+  m_EditorClassIdentifier: 
+  title: Fruit
+  status: 1
+  picture: {fileID: 21300000, guid: fe9f431a3838e23468bcc15f6632e6ca, type: 3}
+  puzzleItem:
+  - {fileID: 395292911840508601, guid: 538d85aabc928c0409953cc71cebcc8a, type: 3}
+  - {fileID: 395292911840508601, guid: 1f0c581ab78d7cf438f3d9d3a63139fa, type: 3}
+  - {fileID: 395292911840508601, guid: a1f3197dec01f4f40951935ef8b15b62, type: 3}
+  - {fileID: 395292911840508601, guid: f3e09fdd11af7d448944af93e1244066, type: 3}
+  - {fileID: 395292911840508601, guid: cba0e60f84e5ff946bd481d9092affc4, type: 3}
+  - {fileID: 395292911840508601, guid: 76e9ef86ae042ed47a34e3c775f07e4c, type: 3}
+  m_hiddenItem:
+  - {fileID: 21300000, guid: 37ab30a9c93dbff47a2ed19ab77d359b, type: 3}
+  - {fileID: 21300000, guid: 0198b92bae8eae7418bc7f8e92edb532, type: 3}
+  - {fileID: 21300000, guid: a746bf60c523cb54bb9c38d22e1c4af4, type: 3}
+  - {fileID: 21300000, guid: 6e1ce92264d6e5442ad6e0d266763939, type: 3}
+  - {fileID: 21300000, guid: cd544cb04e69294489d99efea816c916, type: 3}
+  - {fileID: 21300000, guid: 212dfdf5f0e513a43a06e123e47aab42, type: 3}
+  listPuzzleItemPb:
+  - {fileID: 0}

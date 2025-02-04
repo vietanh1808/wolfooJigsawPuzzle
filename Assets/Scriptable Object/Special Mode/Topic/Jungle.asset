@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620ae3cd9c5f0f448893c0430724a6a6, type: 3}
+  m_Name: Jungle
+  m_EditorClassIdentifier: 
+  title: Jungle
+  status: 0
+  picture: {fileID: 21300000, guid: 6b76b09b8662aee4bb1c3bcf7490acd3, type: 3}
+  puzzleItem:
+  - {fileID: 395292911840508601, guid: 262e94d7e392d224ba0468a136d3b1fa, type: 3}
+  - {fileID: 395292911840508601, guid: 2536651c710b5e04fb4d43446012c036, type: 3}
+  - {fileID: 395292911840508601, guid: a01d59956feda92489b415ced548453f, type: 3}
+  - {fileID: 395292911840508601, guid: 95ef7cb5c87505b4486c5a1862cac5dd, type: 3}
+  m_hiddenItem: []
+  listPuzzleItemPb:
+  - {fileID: 11400000, guid: ddf740f1c239e5a4fb11e57eb3fdd20a, type: 2}
+  - {fileID: 11400000, guid: 9d20c39b989176544924ae210ba734df, type: 2}
+  - {fileID: 11400000, guid: d42f3f1e8fd116741af158b18d1a5319, type: 2}
+  - {fileID: 11400000, guid: 51445fbd202d9d941a4c7fc4602f7d39, type: 2}

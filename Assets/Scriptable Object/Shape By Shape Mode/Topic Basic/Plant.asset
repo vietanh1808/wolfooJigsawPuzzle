@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620ae3cd9c5f0f448893c0430724a6a6, type: 3}
+  m_Name: Plant
+  m_EditorClassIdentifier: 
+  title: Nature
+  status: 1
+  picture: {fileID: 21300000, guid: 76790743d076bd543afe5f111b80fd67, type: 3}
+  puzzleItem:
+  - {fileID: 395292911840508601, guid: c14994f8c5331634582b0f60eb1332ca, type: 3}
+  - {fileID: 395292911840508601, guid: d30aee3dfa842134090e6668a4004d97, type: 3}
+  - {fileID: 395292911840508601, guid: 4c39d3566af4cdc4cbe373daaac33dbc, type: 3}
+  - {fileID: 395292911840508601, guid: f89cd8907c3d2ef47af838b5363ee9f9, type: 3}
+  - {fileID: 395292911840508601, guid: 04cfe42fa747b1f40b2420fd5a8e1255, type: 3}
+  - {fileID: 395292911840508601, guid: 6192536ad83c02c48953f98734aa4ca6, type: 3}
+  - {fileID: 395292911840508601, guid: d454e10b56410f44999b0ba88343b955, type: 3}
+  - {fileID: 395292911840508601, guid: 8fb694f5d2d6eed4c8d49aba8798e4ca, type: 3}
+  - {fileID: 395292911840508601, guid: 0ef560bfa3f5e24409ecf01db40213cc, type: 3}
+  - {fileID: 395292911840508601, guid: f30644f92582e0549a3fbe8073611527, type: 3}
+  - {fileID: 395292911840508601, guid: 08ec80ca25911964eb814d9db956f001, type: 3}
+  m_hiddenItem: []
+  listPuzzleItemPb: []

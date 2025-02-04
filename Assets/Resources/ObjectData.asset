@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a9184d78aaf9f49868372a68c60d32, type: 3}
+  m_Name: ObjectData
+  m_EditorClassIdentifier: 
+  itemCategories:
+  - Name: Shape By Shape
+    topicSt:
+    - {fileID: 11400000, guid: b8b5ac7390f96b246933b796a3181f34, type: 2}
+    - {fileID: 11400000, guid: 7efe1b309493a894983c85ef3c9ee055, type: 2}
+    - {fileID: 11400000, guid: 76388ef276c81d749903e60fe62af69c, type: 2}
+    - {fileID: 11400000, guid: bc5b75642ead9cc4ba9e9cd229b0b9e5, type: 2}
+  - Name: Hidden Shape Mode
+    topicSt:
+    - {fileID: 11400000, guid: c385ee9054d6a934da925c62f55af4dc, type: 2}
+    - {fileID: 11400000, guid: c1d1a0d27b6e9a249bccba5f78ccae50, type: 2}
+    - {fileID: 11400000, guid: 40f77bbe8ef038d4d8bbb07971ca2be7, type: 2}
