@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class SelectPicturePanel : MonoBehaviour
 {
+    [SerializeField] private ScrollItemCrossPromo crossPromoPb;
     [SerializeField] private ScrollItemPicture itemTopicPb;
     [SerializeField] private CustomLayout sbsContent;
     [SerializeField] private CustomLayout hsContent;
@@ -14,8 +15,10 @@ public class SelectPicturePanel : MonoBehaviour
     [SerializeField] private TopicSt[] sbsTopics;
     [SerializeField] private TopicSt[] hsTopics;
     [SerializeField] private TopicSt[] specialTopics;
+    [SerializeField] private CrossPromoSO crossPromoData;
 
     private List<ScrollItemPicture> allPictures = new List<ScrollItemPicture>();
+    private int crossPromoCount =0;
 
     private void Start()
     {
@@ -121,6 +124,13 @@ public class SelectPicturePanel : MonoBehaviour
                     mode = ModeType.SBS
                 });
                 allPictures.Add(newItem);
+
+                if(allPictures.Count % 4 == 0) {
+                    var crossPromoItem = Instantiate(crossPromoPb, sbsContent.transform);
+                    crossPromoItem.Assign(crossPromoData.icons[crossPromoCount], crossPromoData.ids[crossPromoCount]);
+                    crossPromoCount++;
+                    if(crossPromoCount >= crossPromoData.icons.Length) crossPromoCount = 0;
+                }
             }
         }
         sbsContent.Resize();
@@ -139,6 +149,13 @@ public class SelectPicturePanel : MonoBehaviour
                     mode = ModeType.HS
                 });
                 allPictures.Add(newItem);
+
+                if(allPictures.Count % 4 == 0) {
+                    var crossPromoItem = Instantiate(crossPromoPb, hsContent.transform);
+                    crossPromoItem.Assign(crossPromoData.icons[crossPromoCount], crossPromoData.ids[crossPromoCount]);
+                    crossPromoCount++;
+                    if(crossPromoCount >= crossPromoData.icons.Length) crossPromoCount = 0;
+                }
             }
         }
         hsContent.Resize();
@@ -157,6 +174,13 @@ public class SelectPicturePanel : MonoBehaviour
                     mode = ModeType.SPECIAL
                 });
                 allPictures.Add(newItem);
+
+                if(allPictures.Count % 4 == 0) {
+                    var crossPromoItem = Instantiate(crossPromoPb, specialContent.transform);
+                    crossPromoItem.Assign(crossPromoData.icons[crossPromoCount], crossPromoData.ids[crossPromoCount]);
+                    crossPromoCount++;
+                    if(crossPromoCount >= crossPromoData.icons.Length) crossPromoCount = 0;
+                }
             }
         }
         specialContent.Resize();

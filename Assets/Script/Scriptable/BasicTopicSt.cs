@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "New Basic Topic", menuName = "Basic Topic")]
+[CreateAssetMenu(fileName = "New Basic Topic", menuName = "ScriptableObjects/Basic Topic")]
 public class BasicTopicSt : ScriptableObject
 {
     public List<TopicSt> sbsMode; // Shape By Shape Mode

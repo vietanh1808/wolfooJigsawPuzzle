@@ -107,17 +107,23 @@ public class GUIManager : MonoBehaviour
     }
 
     public void BacktoSelectPicturePanel(){
+        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, null);
+
         if(ingame != null) Destroy(ingame.gameObject);
         selectPicturePanel.gameObject.SetActive(true);
         current = selectPicturePanel.gameObject;
     }
     public void PlayIngame(){
+        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, null);
+        
         if(ingame != null) Destroy(ingame.gameObject);
         ingame = Instantiate(inGamePb, canvas.transform);
         selectPicturePanel.gameObject.SetActive(false);
         current = ingame.gameObject;
     }
     public void BackToHome(){
+        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, null);
+
         homePanel.gameObject.SetActive(true);
         selectPicturePanel.gameObject.SetActive(false);
         current = homePanel.gameObject;
@@ -220,6 +226,8 @@ public class GUIManager : MonoBehaviour
 
     private void GetReturnHome()
     {
+        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, null);
+        
         settingPanel.gameObject.SetActive(false);
         current.SetActive(false);
         homePanel.gameObject.SetActive(true);

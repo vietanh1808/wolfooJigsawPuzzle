@@ -42,10 +42,12 @@ public class SettingPanel : MonoBehaviour
     }
     public void DisableHome(bool state)
     {
+        if(homeBtn != null)
             homeBtn.gameObject.SetActive(!state);
     }
     public void DisableFrame(bool state)
     {
+        if(FrameBtn != null)
             FrameBtn.gameObject.SetActive(!state);
     }
     private void OnExit()

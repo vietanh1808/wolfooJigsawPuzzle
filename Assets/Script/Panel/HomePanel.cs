@@ -13,10 +13,12 @@ public class HomePanel : MonoBehaviour
 
     private void Start()
     {
+
+        LoadingPanel.Play(LoadingPanel.LoadingType.Intro, null);
         playBtn.onClick.AddListener(OnPlaygame);
 
         ScalePlayBtn();
-        
+
     }
     void ScalePlayBtn()
     {
@@ -26,13 +28,13 @@ public class HomePanel : MonoBehaviour
            playBtn.transform.DOScale(0.8f, 0.8f)
            .OnComplete(() =>
            {
-                   ScalePlayBtn();
+               ScalePlayBtn();
            });
        });
     }
     private void OnEnable()
     {
-        if(GUIManager.instance == null)
+        if (GUIManager.instance == null)
         {
             return;
         }
@@ -55,7 +57,10 @@ public class HomePanel : MonoBehaviour
         //        // gift
         //    });
         //}
-        SoundManager.Instance.PlaySFX(SFXType.Touch);
-        GameManager.OnPlaygame?.Invoke();
+        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, () =>
+        {
+            SoundManager.Instance.PlaySFX(SFXType.Touch);
+            GameManager.OnPlaygame?.Invoke();
+        });
     }
 }
