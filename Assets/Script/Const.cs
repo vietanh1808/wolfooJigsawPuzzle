@@ -20,6 +20,7 @@ public class Const
     public const int OPEN_SPECIAL_PANEL = 15;
     public const int QUESTION_PANEL = 16;
     public const int SELEC_PICTURE_PANEL = 17;
+    public const int PREVIEW_POPUP = 18;
 
     public const string SBS_ITEM_STORAGE = "Sbs Item";
     public const string HS_ITEM_STORAGE = "Hs Item";

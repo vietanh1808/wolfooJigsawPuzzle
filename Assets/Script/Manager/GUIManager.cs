@@ -30,6 +30,7 @@ public class GUIManager : MonoBehaviour
     // [SerializeField] AdsInvalidPanel adsInvalidPanel;
     [SerializeField] OpenSpecialPanel openSpecialPanel;
     [SerializeField] QuestionPanel questionPanel;
+    [SerializeField] PreviewPopup previewPopup;
 
     public ModeContent inBasicMode, mode;
     [SerializeField] Sprite questionImg;
@@ -217,9 +218,9 @@ public class GUIManager : MonoBehaviour
                 shopPanel.gameObject.SetActive(true);
                 shopPanel.transform.SetAsLastSibling();
                 break;
-            case Const.SELEC_PICTURE_PANEL:
-                selectPicturePanel.gameObject.SetActive(true);
-                selectPicturePanel.transform.SetAsLastSibling();
+            case Const.PREVIEW_POPUP:
+                previewPopup.gameObject.SetActive(true);
+                previewPopup.transform.SetAsLastSibling();
                 break;
         }
     }
