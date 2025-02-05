@@ -27,6 +27,7 @@ public class InGameContent1 : MonoBehaviour
     [SerializeField] Image frame;
     [SerializeField] ParticleSystem starConfetti;
     [SerializeField] GameObject blackLockAction;
+    [SerializeField] Button previewBtn;
 
     List<Image> m_listPicturePuzzle = new List<Image>();
     int idxPuzzle;
@@ -45,6 +46,8 @@ public class InGameContent1 : MonoBehaviour
     {
         SoundManager.Instance.PlaySFX(SFXType.Ingame);
 
+        previewBtn.onClick.AddListener(OnClickPreview);
+
         GUIManager.instance.DisableHomeBtn(true);
         GUIManager.instance.DisableFrameBtn(true);
 
@@ -60,6 +63,7 @@ public class InGameContent1 : MonoBehaviour
 
         HandPoint.instance.MoveHandIngame(true);
     }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -89,6 +93,11 @@ public class InGameContent1 : MonoBehaviour
         GUIManager.instance.DisableFrameBtn(false);
 
         m_update = false;
+    }
+
+    private void OnClickPreview()
+    {
+        
     }
 
     void GetEvent()
