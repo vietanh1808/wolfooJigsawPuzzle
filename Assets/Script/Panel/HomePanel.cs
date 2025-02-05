@@ -14,11 +14,11 @@ public class HomePanel : MonoBehaviour
     private void Start()
     {
 
-        LoadingPanel.Play(LoadingPanel.LoadingType.Intro, null);
-        playBtn.onClick.AddListener(OnPlaygame);
-
-        ScalePlayBtn();
-
+        LoadingPanel.Play(LoadingPanel.LoadingType.Intro, () =>
+        {
+            playBtn.onClick.AddListener(OnPlaygame);
+            ScalePlayBtn();
+        });
     }
     void ScalePlayBtn()
     {

@@ -88,7 +88,7 @@ public class InGameContent1 : MonoBehaviour
         GameManager.OnPuzzleDrag -= GetDragPuzzle;
         GameManager.OnPuzzleBeginDrag -= GetBeginDragPuzzle;
 
-        SoundManager.Instance.PlaySFX(SFXType.Main);
+        SoundManager.Instance.PlayMusic(SFXType.Main);
         GUIManager.instance.DisableHomeBtn(false);
         GUIManager.instance.DisableFrameBtn(false);
 

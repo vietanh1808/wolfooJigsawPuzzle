@@ -44,6 +44,35 @@ public class SoundManager : MonoBehaviour
     {
         PlaySFX(SFXType.Main);
     }
+    public void StopMusic()
+    {
+        _bgSound.volume = 0;
+    }
+    public void PlayMusic(SFXType sFXType)
+    {
+        _bgSound.volume = 1;
+        switch (sFXType)
+        {
+            case SFXType.Ingame:
+                rdIngame = Random.Range(0, ingameSound.Count);
+                mainSound.Pause();
+                if (!ingameSound[rdIngame].isPlaying)
+                {
+                    ingameSound[rdIngame].Play();
+                }
+                _bgSound = ingameSound[rdIngame];
+                break;
+            case SFXType.Main:
+                ingameSound[rdIngame].Stop();
+                if (!mainSound.isPlaying)
+                {
+                    mainSound.Play();
+                    mainSound.loop = true;
+                }
+                _bgSound = mainSound;
+                break;
+        }
+    }
     public void PlaySFX(SFXType sFX)
     {
         switch (sFX)

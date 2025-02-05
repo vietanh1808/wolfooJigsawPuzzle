@@ -38,7 +38,7 @@ public class GUIManager : MonoBehaviour
     [SerializeField] List<Sprite> listBg;
     [SerializeField] Image HandPointer;
 
-    public GameObject Canvas { get => canvas;}
+    public GameObject Canvas { get => canvas; }
     public Sprite QuestionImg { get => questionImg; }
     public List<Sprite> ListBg { get => listBg; }
     public Image BackgroundImg { get => backgroundImg; }
@@ -64,12 +64,12 @@ public class GUIManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
-           instance = this;
+            instance = this;
         }
     }
-    
+
     public void DisableHomeBtn(bool state)
     {
         settingPanel.DisableHome(state);
@@ -104,30 +104,38 @@ public class GUIManager : MonoBehaviour
     void OnPlaygame()
     {
         ChangeModeScreen(homePanel.gameObject, selectPicturePanel.gameObject);
-// modeContent.backgroundUI.BackgroundImg.sprite = listBg[0];
+        // modeContent.backgroundUI.BackgroundImg.sprite = listBg[0];
     }
 
-    public void BacktoSelectPicturePanel(){
-        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, null);
-
-        if(ingame != null) Destroy(ingame.gameObject);
-        selectPicturePanel.gameObject.SetActive(true);
-        current = selectPicturePanel.gameObject;
+    public void BacktoSelectPicturePanel()
+    {
+        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, () =>
+        {
+            if (ingame != null) Destroy(ingame.gameObject);
+            selectPicturePanel.gameObject.SetActive(true);
+            current = selectPicturePanel.gameObject;
+        });
     }
-    public void PlayIngame(){
-        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, null);
-        
-        if(ingame != null) Destroy(ingame.gameObject);
-        ingame = Instantiate(inGamePb, canvas.transform);
-        selectPicturePanel.gameObject.SetActive(false);
-        current = ingame.gameObject;
-    }
-    public void BackToHome(){
-        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, null);
+    public void PlayIngame()
+    {
+        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, () =>
+        {
+            if (ingame != null) Destroy(ingame.gameObject);
+            ingame = Instantiate(inGamePb, canvas.transform);
+            selectPicturePanel.gameObject.SetActive(false);
+            current = ingame.gameObject;
+        });
 
-        homePanel.gameObject.SetActive(true);
-        selectPicturePanel.gameObject.SetActive(false);
-        current = homePanel.gameObject;
+    }
+    public void BackToHome()
+    {
+        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, () =>
+        {
+            homePanel.gameObject.SetActive(true);
+            selectPicturePanel.gameObject.SetActive(false);
+            current = homePanel.gameObject;
+        });
+
     }
 
 
@@ -152,7 +160,8 @@ public class GUIManager : MonoBehaviour
         if (listPanel.Count <= 0)
         {
             return;
-        } else if(listPanel.Count == 1)
+        }
+        else if (listPanel.Count == 1)
         {
             GetReturnHome();
             return;
@@ -227,13 +236,14 @@ public class GUIManager : MonoBehaviour
 
     private void GetReturnHome()
     {
-        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, null);
-        
-        settingPanel.gameObject.SetActive(false);
-        current.SetActive(false);
-        homePanel.gameObject.SetActive(true);
-        listPanel.Clear();
-        backgroundImg.sprite = listBg[3];
+        LoadingPanel.Play(LoadingPanel.LoadingType.Ingame, () =>
+        {
+            settingPanel.gameObject.SetActive(false);
+            current.SetActive(false);
+            homePanel.gameObject.SetActive(true);
+            listPanel.Clear();
+            backgroundImg.sprite = listBg[3];
+        });
     }
     public void ScaleImage(Image item, float width, float height)
     {
