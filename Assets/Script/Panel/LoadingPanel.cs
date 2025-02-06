@@ -13,6 +13,7 @@ public class LoadingPanel : MonoBehaviour
         Ingame
     }
     [SerializeField] private LoadingTopic[] topics;
+    [SerializeField] private VideoClip[] clips;
 
     private static LoadingPanel instance;
     public static Action<LoadingType, Action> Play, Stop;
@@ -33,13 +34,16 @@ public class LoadingPanel : MonoBehaviour
 
     private void OnPlay(LoadingType type, Action OnCompleted)
     {
+        var id = (int)type;
         foreach (var topic in topics)
         {
-            if(topic.Type == type) {
-                topic.PlayOnTime(OnCompleted);
+            if (topic.Type == type)
+            {
                 break;
             }
         }
+        topics[0].Assign(clips[id]);
+        topics[0].PlayOnTime(OnCompleted);
     }
 
     private void OnStop(LoadingType type, Action OnCompleted)

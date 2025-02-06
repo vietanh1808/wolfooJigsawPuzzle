@@ -8,9 +8,10 @@ using UnityEngine.Video;
 public class LoadingTopic : MonoBehaviour
 {
     [SerializeField] private LoadingPanel.LoadingType myTopic;
-    [SerializeField] VideoPlayer videoPlayer;
+    [SerializeField]
 
-    public double Duration => videoPlayer.length;
+VideoPlayer videoPlayer;
+    public double Duration => videoPlayer.length + 1;
     public LoadingPanel.LoadingType Type => myTopic;
 
     public Action OnCompleted;
@@ -18,26 +19,29 @@ public class LoadingTopic : MonoBehaviour
 
     public void Play()
     {
-        videoPlayer.Play();
         gameObject.SetActive(true);
+        videoPlayer.Prepare();
+        videoPlayer.Play();
 
     }
     public void Stop()
     {
+        videoPlayer.Stop();
         gameObject.SetActive(false);
+    }
+    public void Assign(VideoClip video) {
+        videoPlayer.clip = video;
     }
     public void PlayOnTime(Action OnCompleted = null)
     {
         var duration = myTopic == LoadingPanel.LoadingType.Intro ? (float)Duration : (float) Duration + 1;
         this.OnCompleted = OnCompleted;
-        
-        videoPlayer.Prepare();
 
         playTween?.Kill();
         playTween = DOTween.Sequence()
             .AppendInterval(0.1f)
             .AppendCallback(() => Play())
-            .AppendInterval(duration)
+            .AppendInterval((float)Duration)
             .AppendCallback(() =>
             {
                 Stop();

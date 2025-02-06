@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
+using UnityEngine.Android;
 // using GoogleMobileAds.Mediation.IronSource.Android;
 
 public enum ModeType
@@ -58,6 +59,17 @@ public class GameManager : MonoBehaviour
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         // IronSourceClient.Instance.SetMetaData("is_deviceid_optout", "true");
         // IronSourceClient.Instance.SetMetaData("is_child_directed", "true");
+        if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead))
+        {
+            // Request permission if not already granted
+            Permission.RequestUserPermission(Permission.ExternalStorageRead);
+        }
+
+        if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite))
+        {
+            Permission.RequestUserPermission(Permission.ExternalStorageWrite);
+        }
+
     }
     
     public void ScaleImage(Image item, float width, float height)
