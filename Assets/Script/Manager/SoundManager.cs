@@ -28,25 +28,13 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        if(_bgSound)
-        {
-            _bgSound.Play();
-        }
-    }
-    private void OnDisable()
-    {
-        _bgSound.Pause();
-    }
-
     private void Start()
     {
-        PlaySFX(SFXType.Main);
+    //    PlaySFX(SFXType.Main);
     }
     public void StopMusic()
     {
-        _bgSound.volume = 0;
+        _bgSound.Stop();
     }
     public void PlayMusic(SFXType sFXType)
     {
@@ -109,15 +97,6 @@ public class SoundManager : MonoBehaviour
                     mainSound.Play();
                 });
                 break;
-            case SFXType.Ingame:
-                rdIngame = Random.Range(0, ingameSound.Count);
-                mainSound.Pause();
-                if (!ingameSound[rdIngame].isPlaying)
-                {
-                    ingameSound[rdIngame].Play();
-                }
-                _bgSound = ingameSound[rdIngame];
-                break;
             case SFXType.Success:
                 rdHooray2 = Random.Range(0, hooray2Sound.Count);
                 timePlay = hooray2Sound[rdHooray2].clip.length;
@@ -126,15 +105,6 @@ public class SoundManager : MonoBehaviour
                     hooray2Sound[rdHooray2].Play();
                 }
                 mainSound.Play();
-                break;
-            case SFXType.Main:
-                ingameSound[rdIngame].Stop();
-                if (!mainSound.isPlaying)
-                {
-                    mainSound.Play();
-                    mainSound.loop = true;
-                }
-                _bgSound = mainSound;
                 break;
             case SFXType.Touch:
                 touchSound.Stop();

@@ -44,7 +44,7 @@ public class InGameContent1 : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.Instance.PlaySFX(SFXType.Ingame);
+        SoundManager.Instance.PlayMusic(SFXType.Ingame);
 
         previewBtn.onClick.AddListener(OnClickPreview);
 
