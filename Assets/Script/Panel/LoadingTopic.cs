@@ -13,14 +13,16 @@ public class LoadingTopic : MonoBehaviour
 
     public double Duration => videoPlayer.length + 1;
     public LoadingPanel.LoadingType Type => myTopic;
+    private AudioSource audioS;
 
     public Action OnCompleted;
     private Sequence playTween;
 
-[NaughtyAttributes.Button]
+    [NaughtyAttributes.Button]
     public void Play()
     {
-     //   gameObject.SetActive(true);
+        //   gameObject.SetActive(true);
+        SoundManager.Instance.StopMusic();
 
         videoPlayer.Prepare();
         videoPlayer.Play();
@@ -28,22 +30,32 @@ public class LoadingTopic : MonoBehaviour
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
-    //    videoPlayer.
+
+        //    videoPlayer.
     }
-[NaughtyAttributes.Button]
+    [NaughtyAttributes.Button]
     public void Stop()
     {
-     //   gameObject.SetActive(false);
+        SoundManager.Instance.PlayMusic();
+        //   gameObject.SetActive(false);
         videoPlayer.Stop();
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
     }
+    public void TurnOffMusic(){
+      if(audioS == null)   audioS = GetComponentInChildren<AudioSource>();
+        audioS.volume = 0;
+    }
+    public void TurnOnMusic(){
+      if(audioS == null)   audioS = GetComponentInChildren<AudioSource>();
+        audioS.volume = 1;
+    }
     public void PlayOnTime(Action OnCompleted = null)
     {
-        var duration = myTopic == LoadingPanel.LoadingType.Intro ? (float)Duration : (float) Duration + 1;
+        var duration = myTopic == LoadingPanel.LoadingType.Intro ? (float)Duration : (float)Duration + 1;
         this.OnCompleted = OnCompleted;
-        
+
 
         playTween?.Kill();
         playTween = DOTween.Sequence()

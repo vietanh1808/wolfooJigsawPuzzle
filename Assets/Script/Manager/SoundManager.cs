@@ -26,6 +26,7 @@ public class SoundManager : MonoBehaviour
         {
             Instance = this;
         }
+        _bgSound = ingameSound[0];
     }
 
     private void Start()
@@ -34,11 +35,14 @@ public class SoundManager : MonoBehaviour
     }
     public void StopMusic()
     {
-        _bgSound.Stop();
+        _bgSound.Pause();
+    }
+    public void PlayMusic(){
+        _bgSound.Play();
     }
     public void PlayMusic(SFXType sFXType)
     {
-        _bgSound.volume = 1;
+        _bgSound.Pause();
         switch (sFXType)
         {
             case SFXType.Ingame:
@@ -114,6 +118,64 @@ public class SoundManager : MonoBehaviour
                 touchSound2.Stop();
                 touchSound2.Play();
                 break;
+        }
+    }
+
+    internal void TurnOffAllSound()
+    {
+        _bgSound.volume = 0;
+        touchSound.volume = 0;
+        touchSound2.volume = 0;
+        snapSound.volume = 0;
+        mainSound.volume = 0;
+        foreach (var item in hooray2Sound)
+        {
+            item.volume = 0;
+        }
+        foreach (var item in hooraySound)
+        {
+            item.volume = 0;
+        }
+        foreach (var item in cheerSound)
+        {
+            item.volume = 0;
+        }
+        foreach (var item in congratulateSound)
+        {
+            item.volume = 0;
+        }
+        foreach (var item in ingameSound)
+        {
+            item.volume = 0;
+        }
+    }
+
+    internal void TurnOnAllSound()
+    {
+        _bgSound.volume = 1;
+        touchSound.volume = 1;
+        touchSound2.volume = 1;
+        snapSound.volume = 1;
+        mainSound.volume = 1;
+        foreach (var item in hooray2Sound)
+        {
+            item.volume = 1;
+        }
+        foreach (var item in hooraySound)
+        {
+            item.volume = 1;
+        }
+        foreach (var item in cheerSound)
+        {
+            item.volume = 1;
+        }
+        foreach (var item in congratulateSound)
+        {
+            item.volume = 1;
+        }
+        foreach (var item in ingameSound)
+        {
+            item.volume = 1;
         }
     }
 }

@@ -40,7 +40,7 @@ public class InGameContent1 : MonoBehaviour
     bool m_update = true;
 
     private Data myData;
-
+    private PreviewPopup previewPopup;
 
     private void Start()
     {
@@ -60,6 +60,8 @@ public class InGameContent1 : MonoBehaviour
 
         GetEvent();
         GetInfoPuzzle();
+        previewPopup = FindAnyObjectByType<PreviewPopup>(FindObjectsInactive.Include);
+        previewPopup.Assgin(pictureSample.sprite);
 
         HandPoint.instance.MoveHandIngame(true);
     }
@@ -97,7 +99,7 @@ public class InGameContent1 : MonoBehaviour
 
     private void OnClickPreview()
     {
-        
+        GUIManager.instance.OpenPanel(Const.PREVIEW_POPUP);
     }
 
     void GetEvent()

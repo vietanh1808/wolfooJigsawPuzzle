@@ -13,7 +13,6 @@ public class HomePanel : MonoBehaviour
 
     private void Start()
     {
-
         LoadingPanel.Play(LoadingPanel.LoadingType.Intro, () =>
         {
             playBtn.onClick.AddListener(OnPlaygame);

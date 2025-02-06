@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public static Action OnBack;
     public static Action<int> OnTopicClick;
     public static Action<int> OnItemClick;
+    public static Action<bool> OnChangeVolume;
     public static Action OpenLockPanel;
     public static Action OnOpenShop;
     public static Action OnReturnHome;

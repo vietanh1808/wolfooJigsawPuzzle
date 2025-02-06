@@ -21,6 +21,7 @@ public class LoadingPanel : MonoBehaviour
     {
         LoadingPanel.Play += OnPlay;
         LoadingPanel.Stop += OnStop;
+        GameManager.OnChangeVolume += OnChangeVolume;
 
         Init();
     }
@@ -28,8 +29,21 @@ public class LoadingPanel : MonoBehaviour
     {
         LoadingPanel.Play -= OnPlay;
         LoadingPanel.Stop -= OnStop;
+        GameManager.OnChangeVolume -= OnChangeVolume;
     }
 
+    private void OnChangeVolume(bool isMute)
+    {
+        foreach (var item in topics)
+        {
+            if(isMute) {
+                item.TurnOffMusic();
+            }
+            else {
+                item.TurnOnMusic();
+            }
+        }
+    }
 
     private void OnPlay(LoadingType type, Action OnCompleted)
     {
@@ -60,7 +74,7 @@ public class LoadingPanel : MonoBehaviour
 
         foreach (var topic in topics)
         {
-            topic.Stop();
+         //   topic.Stop();
         }
     }
 }

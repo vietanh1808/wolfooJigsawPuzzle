@@ -104,6 +104,15 @@ public class SettingPanel : MonoBehaviour
             soundBtn.image.sprite = soundImg[0]; // Enable Sound
         }
 
-        SoundManager.Instance.gameObject.SetActive(!mute);
+        if(mute) {
+            SoundManager.Instance.TurnOffAllSound();
+
+        }
+        else {
+            SoundManager.Instance.TurnOnAllSound();
+
+        }
+        GameManager.OnChangeVolume(mute);
+    //    SoundManager.Instance.gameObject.SetActive(!mute);
     }
 }
