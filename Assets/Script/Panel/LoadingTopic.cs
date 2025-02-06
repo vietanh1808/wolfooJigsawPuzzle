@@ -18,8 +18,9 @@ public class LoadingTopic : MonoBehaviour
 
     public void Play()
     {
-        videoPlayer.Play();
         gameObject.SetActive(true);
+        videoPlayer.Prepare();
+        videoPlayer.Play();
 
     }
     public void Stop()
@@ -31,13 +32,12 @@ public class LoadingTopic : MonoBehaviour
         var duration = myTopic == LoadingPanel.LoadingType.Intro ? (float)Duration : (float) Duration + 1;
         this.OnCompleted = OnCompleted;
         
-        videoPlayer.Prepare();
 
         playTween?.Kill();
         playTween = DOTween.Sequence()
             .AppendInterval(0.1f)
             .AppendCallback(() => Play())
-            .AppendInterval(duration)
+            .AppendInterval((float)Duration)
             .AppendCallback(() =>
             {
                 Stop();
